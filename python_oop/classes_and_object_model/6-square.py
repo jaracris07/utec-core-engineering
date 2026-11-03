@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+
 """Módulo que define una clase Square con tamaño,
 posición, validación, getters/setters, área e impresión.
 """
 
 
 class Square:
+    
     """Clase que representa un cuadrado con
     tamaño, posición y métodos de impresión.
     """
@@ -73,4 +75,3 @@ class Square:
     def my_print(self):
         """Imprime en la salida estándar el cuadrado usando __str__."""
         print(self)
-        
