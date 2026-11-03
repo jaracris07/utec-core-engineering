@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
-
 """Módulo que define una clase Square con tamaño,
 posición, validación, getters/setters, área e impresión.
 """
 
 
 class Square:
-    
     """Clase que representa un cuadrado con
     tamaño, posición y métodos de impresión.
     """
