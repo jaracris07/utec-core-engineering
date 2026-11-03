@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Módulo que define una clase Square con validación de tamaño y cálculo de área."""
+"""Módulo que define una clase Square
+con validación de tamaño y cálculo de área.
+"""
 
 
 class Square:
