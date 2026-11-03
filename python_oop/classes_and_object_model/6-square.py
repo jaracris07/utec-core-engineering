@@ -36,10 +36,18 @@ class Square:
     @position.setter
     def position(self, value):
         """Establece y valida una nueva posición para el cuadrado."""
-        if (not isinstance(value, tuple) or len(value) != 2 or
-                not isinstance(value[0], int) or not isinstance(value[1], int) or
-                value[0] < 0 or value[1] < 0):
-            raise TypeError("position must be a tuple of 2 positive integers")
+        if not isinstance(value, tuple) or len(value) != 2:
+            raise TypeError(
+                "position must be a tuple of 2 positive integers"
+            )
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
+            raise TypeError(
+                "position must be a tuple of 2 positive integers"
+            )
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError(
+                "position must be a tuple of 2 positive integers"
+            )
         self.__position = value
 
     def area(self):
@@ -52,16 +60,17 @@ class Square:
             return ""
 
         result = []
-        # Maneja la posición vertical (nuevas líneas antes del cuadrado)
         for _ in range(self.__position[1]):
             result.append("")
 
-        # Construye cada línea del cuadrado con su posición horizontal (espacios)
         for _ in range(self.__size):
-            result.append(" " * self.__position[0] + "#" * self.__size)
+            spaces = " " * self.__position[0]
+            hashes = "#" * self.__size
+            result.append(spaces + hashes)
 
         return "\n".join(result)
 
     def my_print(self):
         """Imprime en la salida estándar el cuadrado usando __str__."""
         print(self)
+        
